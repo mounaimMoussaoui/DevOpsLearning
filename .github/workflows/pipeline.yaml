@@ -1,4 +1,4 @@
-name: CI/CD Pipeline Action Github
+name: "CI/CD Pipeline Action Github"
 
 on:
   push:
