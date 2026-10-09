@@ -1,20 +1,20 @@
-name: "CI/CD Pipeline Action Github"
+name: CI/CD Pipeline Action Github
 
 on:
   push:
-    - branches: [main]
+    branches: [main]
 
 jobs:
-  runs-on:
+  build:
 
-    build: Ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout action
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: install node
-        uses: action/setup-node
+        uses: actions/setup-node@v4
         with: 
           node-version: node@16
 
