@@ -6,19 +6,20 @@ on:
 
 jobs:
   runs-on:
+
     build: Ubuntu-latest
 
-  steps:
-    - name: checkout action
-      uses: action/checkout@v4
+    steps:
+      - name: checkout action
+        uses: action/checkout@v4
 
-    - name: install node
-      uses: action/setup-node
-      with: 
-        node-version: node@16
+      - name: install node
+        uses: action/setup-node
+        with: 
+          node-version: node@16
 
-    - name: install dependencies
-      run: npm install
+      - name: install dependencies
+        run: npm install
 
-    - name: run the test
-      run: node test
+      - name: run the test
+        run: node test
